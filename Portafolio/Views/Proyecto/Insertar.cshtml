@@ -1,0 +1,39 @@
+﻿@model ProyectoModel;
+@{
+    ViewData["Title"] = "Insertar";
+}
+
+<div class="card col-8">
+    <div class="card-header">
+        <h1>Agregar Proyecto</h1>
+    </div>
+    <div class="card-body justify-content-center">
+        <form asp-action="Insertar" asp-controller="Proyecto" method="post">
+          @*  <div>
+                <label class="form-label">Numero de edificio</label>
+                <input type="number" asp-for="IdProyecto" class="form-control" />
+            </div>*@
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Nombre del proyecto</label>
+                <input type="text" asp-for="Nombre" class="form-control" />
+            </div>
+            <div>
+                <label class="form-label">Lenguajes usados</label>
+                <input type="text" asp-for="Lenguaje" class="form-control" />
+                <span asp-validation-for="Lenguaje" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Descripcion</label>
+                <input type="text" asp-for="Descripcion" class="form-control" />
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Link de Git</label>
+                <input type="text" asp-for="Link" class="form-control" />
+            </div>
+            <div class="col-md-4 mb-3">
+                <button type="submit" class="btn btn-primary mb-3 btn-sm">Guardar</button> <br />
+                <a asp-action="Listar" asp-controller="Proyecto" class="btn btn-warning btn-sm"> Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
