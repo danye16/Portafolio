@@ -24,7 +24,7 @@ namespace Portafolio
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Proyecto}/{action=Insertar}/{id?}");
+                pattern: "{controller=Personal}/{action=Listar}/{id?}");
 
             app.Run();
         }

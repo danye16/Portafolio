@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ProyectoModel;
+
+<div class="card col-8">
+    <div class="card-header">
+        <h1>Eliminar Proyecto</h1>
+    </div>
+    <div class="card-body justify-content-center">
+        <form asp-action="Eliminar" asp-controller="Proyecto" method="post">
+            <input asp-for="IdProyecto" type="hidden" class="form-control" />
+            <div class="alert alert-danger" role="alert">
+                ¿Desea Eliminar este Proyecto: @Html.DisplayTextFor(m=>m.Nombre)?
+            </div>
+            <div class="col-md-4 -mb-3">
+                <button type="submit" class="btn btn-danger mb-3 btn-sm">Eliminar</button> <br />
+                <a asp-action="Listar" asp-controller="Proyecto" class="btn btn-warning btn-sm">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>

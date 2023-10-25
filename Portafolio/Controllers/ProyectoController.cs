@@ -15,13 +15,19 @@ namespace Portafolio.Controllers
             return View(lista);
         }
 
+       
+
         [HttpGet]
         public IActionResult Insertar()
         {
            
             return View();
         }
+        public IActionResult Ejemplo()
+        {
 
+            return View();
+        }
         [HttpPost]
         public IActionResult Insertar(ProyectoModel model)
         {
